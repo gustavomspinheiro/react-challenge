@@ -19,7 +19,7 @@ export default function Todo({ id, description, done }) {
   };
 
   return (
-    <div id={`container_${id}`}>
+    <article id={`container_${id}`}>
       <div className={`${id % 2 !== 0 ? classess.oddItems : ""} ${classess.toDoItem}`}>
         <div>
           {id} - {description}
@@ -34,7 +34,7 @@ export default function Todo({ id, description, done }) {
         </div>
       </div>
       <div>
-        <button type="button" onClick={(e) => handleDoTodo(e, id)}>
+        <button className={classess.marginRight} type="button" onClick={(e) => handleDoTodo(e, id)}>
           Ok
         </button>
         <Button
@@ -46,6 +46,6 @@ export default function Todo({ id, description, done }) {
           Deletar
         </Button>
       </div>
-    </div>
+    </article>
   );
 }

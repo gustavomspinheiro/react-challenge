@@ -7,6 +7,10 @@ const useStyles = makeStyles({
     fontWeight: "bold",
   },
 
+  marginRight: {
+    marginRight: "5px"
+  },
+  
   oddItems: {
     background: "#c1c1c1",
   },
@@ -25,9 +29,11 @@ const useStyles = makeStyles({
   addTodoButton: {
     background: "#6aeda7",
     borderRadius: "15px 15px 15px 15px",
+    marginLeft: "5px"
   },
 
   toDoItem: {
+    margin: "15px 0",
     "&:hover": {
       cursor: "pointer",
       color: "#374fb2",
