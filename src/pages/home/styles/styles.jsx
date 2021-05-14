@@ -21,6 +21,11 @@ const useStyles = makeStyles({
   noDisplay: {
     display: "none",
   },
+
+  addTodoButton: {
+    background: "#6aeda7",
+    borderRadius: "15px 15px 15px 15px"
+  }
 });
 
 export default useStyles;

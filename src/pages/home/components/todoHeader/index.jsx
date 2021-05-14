@@ -1,8 +1,10 @@
 import React, { useState, useContext, useMemo } from 'react';
 import { TodoContext } from '../../../../contexts/todo.context';
+import useStyles from '../../styles/styles';
 
 export default function TodoHeader() {
 
+    const classess = useStyles();
     const todoContext = useContext(TodoContext);
     const [todo, setTodo] = useState(() => "");
 
@@ -18,7 +20,7 @@ export default function TodoHeader() {
             <p>Lista de Atividades</p>
             <div >
                 <input id="input_add_item" type="text" onChange={(e) => { setTodo(e.target.value) }} placeholder="digite para filtrar"></input>
-                <button type="button" onClick={(e) => handleAddTodo(e)}>Adicionar</button>
+                <button type="button" className={classess.addTodoButton} onClick={(e) => handleAddTodo(e)}>Adicionar</button>
             </div>
         </div>
     )
