@@ -20,7 +20,11 @@ export default function Todo({ id, description, done }) {
 
   return (
     <article id={`container_${id}`}>
-      <div className={`${id % 2 !== 0 ? classess.oddItems : ""} ${classess.toDoItem}`}>
+      <div
+        className={`${id % 2 !== 0 ? classess.oddItems : ""} ${
+          classess.toDoItem
+        }`}
+      >
         <div>
           {id} - {description}
         </div>
@@ -34,7 +38,11 @@ export default function Todo({ id, description, done }) {
         </div>
       </div>
       <div>
-        <button className={classess.marginRight} type="button" onClick={(e) => handleDoTodo(e, id)}>
+        <button
+          className={`classess.marginRight ${done && classess.noDisplay}`}
+          type="button"
+          onClick={(e) => handleDoTodo(e, id)}
+        >
           Ok
         </button>
         <Button
