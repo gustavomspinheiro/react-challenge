@@ -20,7 +20,7 @@ export default function Todo({ id, description, done }) {
 
   return (
     <div id={`container_${id}`}>
-      <div className={`${id % 2 !== 0 ? classess.oddItems : ""}`}>
+      <div className={`${id % 2 !== 0 ? classess.oddItems : ""} ${classess.toDoItem}`}>
         <div>
           {id} - {description}
         </div>

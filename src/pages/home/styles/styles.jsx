@@ -6,7 +6,7 @@ const useStyles = makeStyles({
     fontFamily: "'Roboto Mono', monospace",
     fontWeight: "bold",
   },
-  
+
   oddItems: {
     background: "#c1c1c1",
   },
@@ -24,8 +24,16 @@ const useStyles = makeStyles({
 
   addTodoButton: {
     background: "#6aeda7",
-    borderRadius: "15px 15px 15px 15px"
-  }
+    borderRadius: "15px 15px 15px 15px",
+  },
+
+  toDoItem: {
+    "&:hover": {
+      cursor: "pointer",
+      color: "#374fb2",
+      fontWeight: "bold",
+    },
+  },
 });
 
 export default useStyles;
